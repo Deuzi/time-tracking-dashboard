@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time-tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="tracker-container">
+            <section id="tracker-content">
+                <section id="user">
+                    <div id="user-profile">
+                        <img src="time-tracking-dashboard-main/images/image-jeremy.png" alt="pfp" id="pfp">
+
+                        <div class="user-report">
+                            <small>Report for</small> <br>
+                            <p>Jeremy Robson</p>
+                        </div>
+                    </div>
+
+                    <nav id="progress-nav">
+                        <p class="daily nav">Daily</p>
+                        <p class="Weekly nav">Weekly</p>
+                        <p class="monthly nav">monthly</p>
+                    </nav>
+                </section>
+
+                <section id="activities">
+                    <section id="work">
+                        <div class="work-icon icon">
+                            <img src="time-tracking-dashboard-main/images/icon-work.svg" alt="work">
+                        </div>
+                        <div class="work-detail detail">
+                            <div id="hours-spent">
+                                <p>Work</p>
+                                <p id="work-hour"></p>
+                            </div>
+                           <div id="p-hours-spent">
+                                <img src="time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="ellipis">
+                                <small class="last-week">Last Week - <span id="work-ph"></span> </small>
+                           </div>
+                        </div>
+                    </section>
+
+                    <section id="play">
+                        <div class="play-icon icon">
+                            <img src="time-tracking-dashboard-main/images/icon-play.svg" alt="play">
+                        </div>
+                        <div class="play-detail detail">
+                            <div id="hours-spent">
+                                <p>Play</p>
+                                <p id="play-hour"></p>
+                            </div>
+                           <div id="p-hours-spent">
+                                <img src="time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="ellipis">
+                                <small class="last-week">Last Week - <span id="play-ph"></span> </small>
+                           </div>
+                        </div>
+                    </section>
+
+                    <section id="study">
+                        <div class="study-icon icon">
+                            <img src="time-tracking-dashboard-main/images/icon-study.svg" alt="play">
+                        </div>
+                        <div class="study-detail detail">
+                            <div id="hours-spent">
+                                <p>Study</p>
+                                <p id="study-hour"></p>
+                            </div>
+                           <div id="p-hours-spent">
+                                <img src="time-tracking-dashboard-main/images/icon-ellipsis.svg" alt="ellipis">
+                                <small class="last-week">Last Week - <span id="study-ph"></span> </small>
+                           </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+    
+    <script src="time.js" defer></script> 
+</body>
+</html>

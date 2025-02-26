@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+    --Very-dark-blue: hsl(227, 47%, 4%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+    font-family: 'Rubik', serif;
+}
+
+main{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+#tracker-content{
+    width: 100%;
+}
+
+#tracker-content  #user{
+    color: #ffff ;
+}
+
+/* #user{
+    display: flex;
+    flex-direction: column;
+} */
+
+#user img{
+    width: 64px;
+    height: 64px;
+    border: 2px solid #D9D9D9;
+    border-radius: 50%;
+    margin-right: 1.3rem;
+}
+
+#user #user-profile{
+    background-color: var(--Blue);
+    display: flex ;
+    padding: 1.3rem;
+    border-radius: 10px;
+    z-index: 2;
+    color: var(--Pale-Blue);
+    position: relative;
+}
+
+.user-report p{
+    color: #ffff;
+    margin-top: 0.4rem;
+}
+
+/* -- weeekly, daily and monthly nav -- */
+
+#progress-nav {
+    background-color: var(--Dark-blue) ;
+    color: var(--Pale-Blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    margin-top: -20px;
+    z-index: 1;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+
+#progress-nav p{
+    cursor: pointer;
+}
+
+#progress-nav p:active{
+    color: #ffff;
+}
+
+/* -- weeekly, daily and monthly -- */
+
+
+#activities{
+    color: #ffff;
+}
+
+.work-icon{
+    background-color: var(--Light-orange);
+}
+.icon {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+    margin-top: 1.5rem;
+}
+
+.icon img{
+    position: relative;
+    left: 10rem;
+    top: -0.3rem;
+    height: 64px;
+    width: 64px;
+}
+
+.detail{
+    background-color: var(--Dark-blue);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: -2.6rem;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#hours-spent, #p-hours-spent{
+    display: flex;
+    flex-direction: column;
+}
+
+#p-hours-spent img{
+    width: 21px;
+    height: 5px;
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+#activities small{
+    color: var(--Pale-Blue);
+}
+
+
+.play-icon{
+    background-color: var(--Soft-blue);
+}
+
+.study-icon{
+    background-color: var(--Light-red);
+}
+
