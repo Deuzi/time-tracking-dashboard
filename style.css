@@ -141,6 +141,13 @@ main{
     height: 5px;
     align-self: flex-end;
     margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+#work-hour,
+#play-hour,
+#study-hour{
+    margin-top: 1rem;
 }
 
 #activities small{
@@ -154,5 +161,17 @@ main{
 
 .study-icon{
     background-color: var(--Light-red);
+}
+
+.exercise-icon{
+    background-color: var(--Lime-green);
+}
+
+.social-icon{
+    background-color: var(--Violet);
+}
+
+.self-care-icon{
+    background-color: var(--Soft-orange);
 }
 
