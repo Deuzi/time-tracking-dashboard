@@ -1,5 +1,3 @@
-const activities = document.getElementById('activities');
-
 function fetchData(...callbacks) {
   fetch('data.json')
     .then((response) => {
@@ -427,6 +425,22 @@ function monthlyReport(dataArray) {
 
 fetchData(dailyReport, weeklyReport, monthlyReport);
 
-// document.querySelector('.daily').addEventListener('click', dailyReport);
-// document.querySelector('.weekly').addEventListener('click', weeklyReport);
-// document.querySelector('.monthly').addEventListener('click', monthlyReport);
+function handleDailyClick() {
+  fetchData(dailyReport);
+}
+function handleWeeklyClick() {
+  fetchData(weeklyReport);
+}
+function handleMonthlyClick() {
+  fetchData(monthlyReport);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchData(weeklyReport);
+});
+
+document.querySelector('.daily').addEventListener('click', handleDailyClick);
+document.querySelector('.Weekly').addEventListener('click', handleWeeklyClick);
+document
+  .querySelector('.monthly')
+  .addEventListener('click', handleMonthlyClick);
