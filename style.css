@@ -8,6 +8,7 @@
 
 :root{
     --Blue: hsl(246, 80%, 60%);
+    --hover: #33397A;
 
     --Light-orange: hsl(15, 100%, 70%);
     --Soft-blue: hsl(195, 74%, 62%);
@@ -43,10 +44,6 @@ main{
     color: #ffff ;
 }
 
-/* #user{
-    display: flex;
-    flex-direction: column;
-} */
 
 #user img{
     width: 64px;
@@ -96,7 +93,7 @@ main{
 /* -- weeekly, daily and monthly -- */
 
 
-#activities{
+#work, #play, #study, #exercise, #social, #self-care{
     color: #ffff;
 }
 
@@ -106,7 +103,7 @@ main{
 .icon {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 13px;
     z-index: 1;
     margin-top: 1.5rem;
 }
@@ -121,37 +118,56 @@ main{
 
 .detail{
     background-color: var(--Dark-blue);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: -2.6rem;
+    padding: 1.2rem;
+    border-radius: 13px;
+    margin-top: -3rem;
     z-index: 2;
     position: relative;
     display: flex;
-    justify-content: space-between;
-}
-
-
-#hours-spent, #p-hours-spent{
-    display: flex;
     flex-direction: column;
 }
+
+.detail:hover{
+    background-color: var(--hover);
+    cursor: pointer;
+}
+
+
+
+#p-hours-spent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+#hours-spent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 #p-hours-spent img{
     width: 21px;
     height: 5px;
     align-self: flex-end;
-    margin-bottom: 1.5rem;
     cursor: pointer;
+    align-self: center;
 }
 
 #work-hour,
 #play-hour,
-#study-hour{
-    margin-top: 1rem;
+#study-hour,
+#social-hour,
+#exercise-hour,
+#self-care-hour{
+    margin-top: 0.8rem;
 }
 
-#activities small{
+.detail small{
     color: var(--Pale-Blue);
+    margin-top: 0.5rem;
 }
 
 
@@ -175,3 +191,80 @@ main{
     background-color: var(--Soft-orange);
 }
 
+
+@media (min-width: 767px) {
+    #tracker-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 69.4rem;
+        height: auto;
+        margin: 3rem 1.5rem;
+    }
+    #tracker-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.3rem;
+        align-items: stretch;
+    }
+    
+    #tracker-content section{
+        height: 100%;
+        width: 100%;
+    }
+    
+    #user{
+        grid-row: span 2;
+        height: 100%;
+    }
+
+
+    #user-profile{
+        flex-direction: column;
+    }
+    
+    .user-report{
+        margin-top: 1.2rem;
+    }
+    
+    .user-report p{
+        font-size: 2.5rem;
+    }
+    #progress-nav{
+        flex-direction: column;
+    }
+    
+    #progress-nav p{
+        margin-top: 1rem;
+    }
+
+    .icon {
+        margin-top: 0;
+    }
+
+
+    
+    #work-hour,
+    #play-hour,
+    #study-hour,
+    #social-hour,
+    #exercise-hour,
+    #self-care-hour{
+       font-size: 3.1rem;
+       font-weight: 100;
+    }
+
+    #hours-spent{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .detail{
+        margin-top: -2.3rem;
+    }
+    
+    
+}
